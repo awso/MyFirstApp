@@ -1,0 +1,252 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Computer Information System</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" charset="utf-8" src="cordova-2.9.0.js"></script>
+<script type="text/javascript" charset="utf-8" src="jquery/jquery-1.10.2.js"></script>
+<script type="text/javascript" charset="utf-8" src="jquery/jquery.mobile-1.3.2.min.js"></script>
+<link rel="stylesheet" type="text/css" href="jquery/css/jquery.mobile-1.3.2.min.css"/>
+<script type="text/javascript" charset="utf-8">
+//*********************************************************
+// Wait for Cordova to Load
+//*********************************************************
+document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+
+}
+</script>
+</head>
+<body>
+<!---------------------------------- Main Page --------------------------------------->
+<div data-role="page" id="pgHome" data-theme="b">
+	
+	<div data-role="header" id="hdHome">
+		<h1>C.I.S.</h1>
+	</div>
+	
+	<div data-role="content">
+		Computer Interactive System
+		<a href="#loginForm" data-rel="popup" data-position-to="window" data-role="button" data-inline="true" data-icon="check" data-theme="a" data-transition="pop">Sign in</a>
+		<div data-role="popup" id="loginForm" data-theme="a" class="ui-corner-all">
+			<form>
+				<div style="padding:10px 20px;">
+					<h3>Sign in</h3>
+     				<label for="username" class="ui-hidden-accessible">Username:</label>
+     				<input type="text" data-clear-btn="true" name="user" id="username" value="" placeholder="username" data-theme="a">
+     				<label for="password" class="ui-hidden-accessible">Password:</label>
+     				<input type="password" data-clear-btn="true" name="pass" id="password" value="" autocomplete="off" placeholder="password" data-theme="a">
+					<a href="#" data-role="button" data-inline="true" data-rel="back" data-theme="c">Cancel</a>
+					<a href="#CourseSelect" data-role="button" data-transition="fade" data-icon="check" data-inline="true" data-theme="b">Submit</a>
+				</div>
+			</form>			
+		</div>
+		<a href="#signUpForm" data-rel="popup" data-position-to="window" data-role="button" data-inline="true" data-icon="check" data-theme="c" data-transition="pop">Sign Up</a>
+		<div data-role="popup" id="signUpForm" data-theme="a" class="ui-corner-all">
+			<form>
+				<div style="padding:10px 20px;">
+					<h3>Sign Up</h3>
+     				<label for="username" class="ui-hidden-accessible">Username:</label>
+     				<input type="text" data-clear-btn="true" name="user" id="username" value="" placeholder="username" data-theme="a">
+     				<label for="password" class="ui-hidden-accessible">Password:</label>
+     				<input type="password" data-clear-btn="true" name="pass" id="password" value="" autocomplete="off" placeholder="password" data-theme="a">
+     				<label for="names" class="ui-hidden-accessible">Password:</label>
+     				<label for="password2" class="ui-hidden-accessible">Verify Password:</label>
+     				<input type="password" data-clear-btn="true" name="pass2" id="password2" value="" autocomplete="off" placeholder="verify password" data-theme="a">
+     				<input type="text" data-clear-btn="true" name="name" id="names" value="" autocomplete="off" placeholder="First Name" data-theme="a">
+					<a href="#" data-role="button" data-inline="true" data-rel="back" data-theme="c">Cancel</a>
+					<a href="#CourseSelect" data-role="button" data-transition="fade" data-icon="check" data-inline="true" data-theme="b">Submit</a>
+				</div>
+			</form>			
+		</div>
+	</div>
+	
+</div>
+<!---------------------------------- Course Select --------------------------------------->	
+<div data-role="page" id="CourseSelect" data-theme="b">
+
+	<div data-role="header" data-theme="a" id="hdCourseSelect">
+    	<h1>Course Selection</h1>
+    	<a href="#mnuMain" data-role="button" data-icon="bars" data-iconpos="notext" data-theme="c" data-inline="true" class="ui-btn-right">Menu</a>
+	</div>
+
+	<div data-role="content">
+		<div data-role="controlgroup" id="ctrlTwo">
+    		<a href="#WeekSelect" data-role="button" data-transition="slide" data-theme="a">Course 1</a>
+    		<a href="#" data-role="button" data-theme="a">Course 2</a>
+    		<a href="#" data-role="button" data-theme="a">Course 3</a>
+    		<a href="#" data-role="button" data-theme="a">Course 4</a>
+    		<a href="#" data-role="button" data-theme="a">Course 5</a>
+    		<a href="#" data-role="button" data-theme="a">Course 6</a>
+    		<a href="#" data-role="button" data-theme="a">Course 7</a>
+    		<a href="#" data-role="button" data-theme="a">Course 8</a>
+    		<a href="#" data-role="button" data-theme="a">Course 9</a>
+    		<a href="#" data-role="button" data-theme="a">Course 10</a>
+    		<a href="#" data-role="button" data-theme="a">Course 11</a>
+    		<a href="#" data-role="button" data-theme="a">Course 12</a>
+    		<a href="#" data-role="button" data-theme="a">Course 13</a>
+		</div>
+	</div>
+
+	<div data-role="panel" id="mnuMain" data-position="right" data-display="push" data-theme="a">
+		<div data-role="controlgroup" id="ctrlOne">
+    		<a href="#CourseSelect" data-role="button">Courses</a>
+    		<a href="#WeekSelect" data-role="button">Weeks</a>
+    		<a href="#confirmLogOut" data-rel="popup" data-position-to="window" data-role="button" data-transition="pop" data-icon="delete">Logout</a>
+    		<div data-role="popup" id="confirmLogOut" data-overlay-theme="a" data-theme="c" data-dismissable="false" style="max-width:400px;" class="ui-corner-all">
+    			<div data-role="header" data-theme="a" class="ui-corner-top">
+    				<h1>Sign Out?</h1>
+				</div>
+				<div data-role="content" data-theme="d" class="ui-corner-bottom ui-content">
+					<a href="#" data-role="button" data-inline="true" data-rel="back" data-theme="c">No</a>
+					<a href="#pgHome" data-icon="check" data-role="button" data-inline="true" data-transition="flow" data-theme="b">Yes</a>
+				</div>
+			</div>
+			
+				
+		</div>
+	</div><!--/panel--->
+
+</div>
+
+<!---------------------------------- Week Select --------------------------------------->	
+<div data-role="page" id="WeekSelect" data-theme="b">
+	
+	<div data-role="header" data-theme="a" id="hdWeekSelect">
+    	<h1>Week Select</h1>
+    	<a href="#mnuMain" data-role="button" data-icon="bars" data-iconpos="notext" data-theme="c" data-inline="true" class="ui-btn-right">Menu</a>
+	</div>
+
+	<div data-role="content">
+		<div data-role="controlgroup">
+    		<a href="#WeekOne" data-role="button" data-theme="a" data-transition="slide">Week 1</a>
+    		<a href="#" data-role="button" data-theme="a" data-transition="slide">Week 2</a>
+   			<a href="#" data-role="button" data-theme="a" data-transition="slide">Week 3</a>
+    		<a href="#" data-role="button" data-theme="a" data-transition="slide">Week 4</a>
+    		<a href="#" data-role="button" data-theme="a" data-transition="slide">Week 5</a>
+    		<a href="#" data-role="button" data-theme="a" data-transition="slide">Week 6</a>
+    		<a href="#" data-role="button" data-theme="a" data-transition="slide">Week 7</a>
+    		<a href="#" data-role="button" data-theme="a" data-transition="slide">Week 8</a>
+    		<a href="#" data-role="button" data-theme="a" data-transition="slide">Week 9</a>
+    		<a href="#" data-role="button" data-theme="a" data-transition="slide">Week 10</a>
+    		<a href="#" data-role="button" data-theme="a" data-transition="slide">Week 11</a>
+    		<a href="#" data-role="button" data-theme="a" data-transition="slide">Week 12</a>
+    		<a href="#" data-role="button" data-theme="a" data-transition="slide">Week 13</a>
+		</div>
+	</div>
+
+	<div data-role="panel" id="mnuMain" data-position="right" data-display="push" data-theme="a">
+		<div data-role="controlgroup" id="ctrlOne">
+    		<a href="#CourseSelect" data-role="button">Courses</a>
+    		<a href="#WeekSelect" data-role="button">Weeks</a>
+    		<a href="#confirmLogOut" data-rel="popup" data-position-to="window" data-role="button" data-transition="pop" data-icon="delete">Logout</a>
+    		<div data-role="popup" id="confirmLogOut" data-overlay-theme="a" data-theme="c" data-dismissable="false" style="max-width:400px;" class="ui-corner-all">
+    			<div data-role="header" data-theme="a" class="ui-corner-top">
+    				<h1>Sign Out?</h1>
+				</div>
+				<div data-role="content" data-theme="d" class="ui-corner-bottom ui-content">
+					<a href="#" data-role="button" data-inline="true" data-rel="back" data-theme="c">No</a>
+					<a href="#pgHome" data-icon="check" data-role="button" data-inline="true" data-transition="flow" data-theme="b">Yes</a>
+				</div>
+			</div>
+		</div>
+	</div><!--/panel--->
+
+</div>
+
+<!---------------------------------- Week One --------------------------------------->
+<div data-role="page" id="WeekOne" data-theme="a">
+	
+	<div data-role="header" data-theme="a" id="hdWeekOne">
+    	<h1>Week One</h1>
+    	<a href="#mnuMain" data-role="button" data-icon="bars" data-iconpos="notext" data-theme="c" data-inline="true" class="ui-btn-right">Menu</a>
+	</div>
+
+	<div data-role="content">
+		Week One
+	</div>
+
+	<div data-role="footer" id="ftFeedback" data-position="fixed">
+		<form>
+			<a href="#Feedback" data-role="button">Feedback</a>
+		</form>
+	</div>
+	
+	<div data-role="panel" id="mnuMain" data-position="right" data-display="push" data-theme="a">
+		<div data-role="controlgroup" id="ctrlOne">
+    		<a href="#CourseSelect" data-role="button">Courses</a>
+    		<a href="#WeekSelect" data-role="button">Weeks</a>
+    		<a href="#confirmLogOut" data-rel="popup" data-position-to="window" data-role="button" data-transition="pop" data-icon="delete">Logout</a>
+    		<div data-role="popup" id="confirmLogOut" data-overlay-theme="a" data-theme="c" data-dismissable="false" style="max-width:400px;" class="ui-corner-all">
+    			<div data-role="header" data-theme="a" class="ui-corner-top">
+    				<h1>Sign Out?</h1>
+				</div>
+				<div data-role="content" data-theme="d" class="ui-corner-bottom ui-content">
+					<a href="#" data-role="button" data-inline="true" data-rel="back" data-theme="c">No</a>
+					<a href="#pgHome" data-icon="check" data-role="button" data-inline="true" data-transition="flow" data-theme="b" class="ui-btn-right">Yes</a>
+				</div>
+			</div>
+		</div>
+	</div><!--/panel--->
+
+</div>
+
+<!---------------------------------- Feedback --------------------------------------->
+<div data-role="page" id="Feedback" data-theme="a">
+	
+	<div data-role="header" data-theme="a" id="hdFeedback">
+    	<h1>Feedback</h1>
+    	<a href="#mnuMain" data-role="button" data-icon="bars" data-iconpos="notext" data-theme="c" data-inline="true" class="ui-btn-right">Menu</a>
+	</div>
+	
+	<div data-role="content" data-inline="true">
+		<form>
+			<fieldset data-role="controlgroup" data-inline="true" data-iconpos="right">
+				
+				<label for="fdOpt1a">DIDN'T UNDERSTAND
+				<input type="radio" name="fdOpt1" id="fdOpt1a" value="off"></label>
+				<label for="fdOpt1b">NEEDS IMPROVEMENT
+				<input type="radio" name="fdOpt1" id="fdOpt1b" value="off"></label>
+				<label for="fdOpt1c">GOOD
+				<input type="radio" name="fdOpt1" id="fdOpt1c value="off"></label>
+				
+			</fieldset>	
+			<a href="#Comments" data-role="button">COMMENTS</a>
+		</form>
+	</div>
+	
+	<div data-role="footer" data-position="fixed" data-inline="true">
+		<form>
+			<a href="#" data-role="button" data-rel="back" data-inline="true" data-theme="c">Cancel</a>
+			<a href="#WeekOne" data-role="button" data-inline="true" data-theme="b" class="ui-btn-right">Submit</a>
+		</form>
+	</div>
+	
+</div>	
+	
+<!---------------------------------- Comment --------------------------------------->
+<div data-role="page" id="Comments" data-theme="a">
+	
+	<div data-role="header" data-theme="a" id="hdComment">
+    	<h1>Comment</h1>
+    	<a href="#mnuMain" data-role="button" data-icon="bars" data-iconpos="notext" data-theme="c" data-inline="true" class="ui-btn-right">Menu</a>
+	</div>
+	
+	<div data-role="content">
+		<div data-role="controlgroup">
+			<label for="txtComment">Comment:</label>
+    		<textarea cols="40" rows="10" name="comment" id="txtComment" placeholder="Comment"></textarea>
+		</div>
+	</div>
+	
+	<div data-role="footer" data-position="fixed" data-inline="true">
+		<form>
+			<a href="#" data-role="button" data-rel="back" data-inline="true" data-theme="c">Cancel</a>
+			<a href="#Feedback" data-role="button" data-inline="true" data-theme="b" class="ui-btn-right">Submit</a>
+		</form>
+	</div>
+</div>
+<!-----------------------------------  End  ---------------------------------------------->
+</body>
+</html>
+	
